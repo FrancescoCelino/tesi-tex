@@ -1,0 +1,58 @@
+\begin{thebibliography}{1}
+
+\bibitem{vaxita23}
+Dati coperture vaccinali influenza,
+  https://www.salute.gov.it/portale/influenza.
+
+\bibitem{flu21}
+Yu~Bai and Xiaonan Tao.
+\newblock Comparison of covid-19 and influenza characteristics.
+\newblock {\em Journal of Zhejiang University-SCIENCE B Biomedicine and
+  Biotechnology}, 2021.
+
+\bibitem{vax23}
+Kissling Esther, Maurel Marine, Emborg Hanne-Dorthe, Whitaker Heather,
+  McMenamin Jim, Howard Jennifer, Trebbien Ramona, Watson Conall, Findlay Beth,
+  Pozo Francisco, Bolt~Botnen Amanda, Harvey Ciaran, and Rose Angela.
+\newblock Interim 2022/23 influenza vaccine effectiveness: six european
+  studies, october 2022 to january 2023.
+\newblock {\em Euro Surveill. 2023;28(21):pii=2300116}, 2023.
+
+\bibitem{flu07}
+Carrat F, Vergu E, Ferguson NM, Lemaitre M, Cauchemez S, Leach S, and Valleron
+  AJ.
+\newblock Time lines of infection and disease in human influenza: A review of
+  volunteer challenge studies.
+\newblock {\em American Journal of Epidemiology}, 2007.
+
+\bibitem{par21}
+Parino F., Zino L., Porfiri M., and Rizzo A.
+\newblock Modelling and predicting the effect of social distancing and travel
+  restrictions on covid-19 spreading.
+\newblock {\em J. R. Soc. Interface 18: 20200875.}, 2021.
+
+\bibitem{influcast}
+Stefania Fiandrino, Andrea Bizzotto, Giorgio Guzzetta, Stefano Merler, Federico
+  Baldo, Eugenio Valdano, Alberto Mateo-Urdiales, Antonino Bella, Francesco
+  Celino, Lorenzo Zino, Alessandro Rizzo, Yuhan Li, Nicola Perra, Corrado
+  Gioannini, Paolo Milano, Daniela Paolotti, Marco Quaggiotto, Luca Rossi, Ivan
+  Vismara, Alessandro Vespignani, and Nicolo Gozzi.
+\newblock Collaborative forecasting of influenza-like illness in italy: the
+  influcast experience.
+\newblock {\em medRxiv}, 2024.
+
+\bibitem{ker27}
+William~Ogilvy Kermack and A.~G. McKendrick.
+\newblock A contribution to the mathematical theory of epidemics.
+\newblock {\em Proc. R. Soc. Lond. A115700 721}, 1927.
+
+\bibitem{github}
+Predizioni-Epidemiologiche-Italia, Influcast
+\newblock 
+https://github.com/Predizioni-Epidemiologiche-Italia/Influcast
+
+\bibitem{istat}
+Risultati del Censimento permanente della popolazione
+\newblock https://www.istat.it/statistiche-per-temi/censimenti/popolazione-e-abitazioni/risultati/
+
+\end{thebibliography}
