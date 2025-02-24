@@ -15,8 +15,21 @@
 \usepackage{amsmath}
 \usepackage{verbatim}
 \usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{caption}
+\usepackage{subcaption}
+\usetikzlibrary{shapes.geometric, arrows, positioning}
 
-
+\tikzstyle{susceptible} = [circle, minimum size=1.2cm, draw=blue, fill=blue!20, text centered]
+\tikzstyle{infected} = [circle, minimum size=1.2cm, draw=red, fill=red!20, text centered]
+\tikzstyle{recovered} = [circle, minimum size=1.2cm, draw=green, fill=green!20, text centered]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{compartment} = [rectangle, rounded corners, minimum width=2.5cm, minimum height=1.5cm, text centered, draw=black, fill=blue!20]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzset{
+	state/.style={circle, minimum size=1.2cm, draw=blue, fill=blue!20, text centered},
+	arrow/.style={thick,->,>=stealth}
+}
 % Definition of a new language for listings
 %\lstdefinelanguage{P4}
 %{
@@ -134,7 +147,8 @@ Bayesian inference tools and Monte Carlo methods are then used to improve the es
 This work emphasizes the role of adaptive modeling in epidemiology, and how public health strategies driven by past data can help in managing seasonal epidemics. 
 
 \indici
-
+\listoffigures
+\listoftables
 \mainmatter
 
 \chapter{Introduction}
@@ -185,6 +199,23 @@ The earliest modern compartmental model is the SIR model, introduced by Kermack 
 	\end{aligned}
 \end{equation}
 
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[node distance=4cm]
+		
+		% Nodes (using \parbox to allow multi-line text)
+		\node (S) [compartment] {\parbox{2.5cm}{\centering \textbf{Susceptible} \\ $S$}};
+		\node (I) [compartment, right of=S] {\parbox{2.5cm}{\centering \textbf{Infected} \\ $I$}};
+		\node (R) [compartment, right of=I] {\parbox{2.5cm}{\centering \textbf{Recovered} \\ $R$}};
+		
+		% Arrows with transition labels
+		\draw [arrow] (S) -- (I) node[midway, above] {$\beta \frac{SI}{N}$};
+		\draw [arrow] (I) -- (R) node[midway, above] {$\gamma I$};
+		
+	\end{tikzpicture}
+	\caption{Flowchart of the SIR Compartmental Model.}
+\end{figure}
+
 where \(N\) is the total population size, \(\beta\) is the transmission rate, and \(\gamma\) is the recovery rate. It is apparent that one of the key hypotheses of the SIR model is that a person cannot become infectious twice: once that person has recovered, they cannot become susceptible again. The model also assumes that our total population remains constant over time: the total sum of $ S + I + R $ cannot change over time, and this fact is easily verifiable by integrating these equations with respect to time. 
 
 This model's simplicity, while being its greatest strength, is also a major weakness: the model does not contemplate an "asymptomatic period" of sorts, since as soon as you are taken out of the susceptible compartment you can already spread the disease to other people. This behaviour does not describe real-life epidemic phenomena correctly, but makes the model simpler conceptually and easier-to-use. 
@@ -211,6 +242,55 @@ For simplicity's sake, let us consider the SIR model, where herd immunity is ach
 
 At this point, the effective reproduction number (\(R_t = R_0 \cdot \frac{S}{N}\)) drops below 1, causing the epidemic to decline. This principle also holds true for more complex models like SEINR, where, as explained, the dynamics of immunity and disease spread are also influenced by latency periods and non-infectious stages. This behaviour is harder to describe in analitical terms, but will be numerically visible in the following experiments. 
 
+\begin{figure}[h]
+	\centering
+	% First subplot: R_0 < 1 (infection dies out)
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				domain=0:10,
+				samples=100,
+				xlabel={Time ($t$)},
+				ylabel={Infected ($I(t)$)},
+				title={$R_0 < 1$: Infection Dies Out},
+				axis lines=left,
+				ymin=0, ymax=1,
+				xtick={0,2,4,6,8,10},
+				ytick={0,0.2,0.4,0.6,0.8,1},
+				every axis plot/.append style={thick}
+				]
+				% Exponential decay curve: infection fades out
+				\addplot[blue] {exp(-0.8*x)};
+			\end{axis}
+		\end{tikzpicture}
+	\end{subfigure}
+	\hfill
+	% Second subplot: R_0 > 1 (infection spreads)
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				domain=0:10,
+				samples=100,
+				xlabel={Time ($t$)},
+				ylabel={Infected ($I(t)$)},
+				title={$R_0 > 1$: Epidemic Spreads},
+				axis lines=left,
+				ymin=0, ymax=1,
+				xtick={0,2,4,6,8,10},
+				ytick={0,0.2,0.4,0.6,0.8,1},
+				every axis plot/.append style={thick}
+				]
+				% Sigmoid-like curve: infection grows
+				\addplot[red] {1/(1 + exp(-1.5*(x-5)))};
+			\end{axis}
+		\end{tikzpicture}
+	\end{subfigure}
+	
+	\caption{Comparison of infection dynamics based on $R_0$. Left: If $R_0 < 1$, infection decreases and dies out. Right: If $R_0 > 1$, infection spreads and leads to an epidemic.}
+\end{figure}
+
 In the context of seasonal influenza, if we make the assumption that a person can only become infected once each year, the concept of herd immunity plays a significant role in shaping public health strategies, particularly in designing vaccination campaigns (many compartmental models automatically include vaccinated people in the removed compartment). By estimating \(R_0\) and tracking its progression as the epidemic goes on, one can gain insight into how contagious a certain virus or bacteria strain is in a certain place at a certain time, and thus whether implementing non-pharmaceutical interventions (NPIs), such as social distancing or lockdowns, is warranted. 
 
 %Inizia parlando dei modelli a compartimenti in generale, introduci il SIR, parla della struttura a equazioni diff. alle derivate ordinarie, introduci il modello SEINR generale coi 5 diversi compartimenti. Parla del concetto di immunità di gregge nei modelli col compartimento removed, in funzione del numero di riproduzione di base
@@ -234,6 +314,14 @@ As explained, the dynamics of the disease will be modeled using the susceptible-
 	\item \(I \to N\): Transition to the \textit{Non-infectious} (\(N\)) compartment occurs at rate \(\mu\), where \(1/\mu\) is the average infectious period.
 	\item \(N \to R\): Transition to the \textit{Removed} (\(R\)) compartment occurs at rate \(\gamma\), while \(1/\gamma\) represents the average delay before recovery or death.
 \end{itemize}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Figures/SEINR.png}  % Replace with actual figure file
+	\caption{A flow chart explaining how the SEINR compartmental model is organized}
+	%\label{fig:commuting_matrix}
+\end{figure}
+
 It is clear that the average time from infectiousness to removal is \(1/\mu + 1/\gamma\). The transition between compartments is regulated by the following set of ODEs:
 \[
 \begin{aligned}
@@ -259,6 +347,13 @@ P_h = \frac{1}{\tilde{n}_h} \left( \sum_{j=1}^P (1 - \alpha \beta a_j b) I_j^h +
 Q_h = \frac{1}{\tilde{n}_h} \left( \sum_{j=1}^P (1 - \beta b) \alpha a_j I_j^k + \sum_{k \in \mathcal{H}} \mathbf{W}_{hk} \sum_{j=1}^P \alpha \beta a_j b I_j^k \right),
 \]
 and \(\tilde{n}_h\), is the effective population size in community \(h\). This is defined as
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Figures/communities_interactions.png}  % Replace with actual figure file
+	\caption{Interactions between communities in the Metapopulation framework}
+	%\label{fig:commuting_matrix}
+\end{figure}
 
 Thus, we now have a SEINR framework that incorporates interactions between various communities.
 
@@ -316,7 +411,14 @@ Vaccine efficacy values are taken from \cite{vax23} and are applied to reduce th
 
 \section{Real-world Data}
 
-In order to validate our model, it is necessary to rely on real-world epidemiological data: in our case, we decided to utilize the weekly incidence of influenza-like illnesses (ILI) at the regional level. These data are sourced from the official \textit{Influcast} project repository on GitHub \cite{github}, which provides up-to-date weekly reports on influenza incidence across Italian regions. These data are publicly available, and the information provided has its roots in a network of Italian doctors that decided to contribute to the \textit{Influcast} project by sending data about how many of their patients show signs of flu illness. 
+In order to validate our model, it is necessary to rely on real-world epidemiological data: in our case, we decided to utilize the weekly incidence of influenza-like illnesses (ILI) at the regional level. These data are sourced from the official \textit{Influcast} project repository on GitHub \cite{github}, which provides up-to-date weekly reports on influenza incidence across Italian regions. These data are publicly available, and the information provided has its roots in a network of Italian doctors that decided to contribute to the \textit{Influcast} project by sending data about how many of their patients show signs of flu illness. \begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Figures/incidence_time_series.png}  % Replace with actual figure file
+	\caption{Incidence as a function of week number for various years}
+	%\label{fig:commuting_matrix}
+\end{figure}
+
+
 
 \subsection{Data Format}
 
@@ -421,24 +523,334 @@ By combining virological knowledge with empirical calibration, our model ensures
 
 
 \section{A different approach: Bayesian estimates}
-parla della seconda parte del lavoro, cioe' riscrivere il modello per ottenere un aggiornamento in tempo reale dei parametri scelti, man manoche uscivano i nuovi dati reali settimanali sull'incidenza.  
+As an additional feature of the model, we tried implementing dynamic interval ranges and probability distributions for key epidemiological parameters: these distributions will be updated on a weekly basis as new data comes out, using the framework provided by bayesian statistics. This allows our model to adapt more easily to ever-so-slight yearly variations in Influenza infectivity, instead of using fixed parameters distributions (which are probably good enough to give credible results, but do not really fit well training data)
 
 \subsection{Theory of Bayesian Estimates}
-Parla molto brevemente del teorema di Bayes, che cos'e' una prior, una posterior e la likelyhood, e di come si possono usare questi concetti nel nostro modello, creando delle distribuzioni a priori per i parametri lambda, nu e beta. Spiega le differenze con l'approccio frequentista in probabilita'. 
 
-\subsection{Implementation}
-Spiega come implementare questo approccio nel modello SEINR tramite Metodi Monte Carlo per via della forma complicatissima della likelyhood
+The Bayesian framework is founded on Bayes' theorem, which for a vector of parameters $\theta$ (e.g., the transmission rate $\beta$, the latency rate $\nu$, etc.) and the observed data $D$ (such as weekly influenza incidence) can be written as:
+\[
+p(\theta|D) = \frac{L(D|\theta) \, p(\theta)}{p(D)},
+\]
+where:
+\begin{itemize}
+	\item $p(\theta)$ represents the \textbf{prior distribution}, capturing our initial beliefs about the parameters (whether those beliefs are informed by virological studies or real world data about flu outbreaks);
+	\item $L(D|\theta)$ is the \textbf{likelihood function}, which quantifies the probability of observing some kind of data $D$ given the parameters $\theta$;
+	\item $p(\theta|D)$ denotes the \textbf{posterior distribution}, that is, our updated belief about how the parameters are distributed after having observed the data;
+	\item lastly, $p(D)$ is a normalizing constant ensuring that the posterior integrates to 1.
+\end{itemize}
+
+On a more intuitive level, given an initial distribution for our parameters, Bayes' Theorem allows us to ask ourselves how we can update this distribution in order to fit the data we have: the new distribution will of course be proportional to our prior distribution, but also to how likely it is to observe the data we have if we assume that prior distribution to be truthful. 
+
+In contrast with the frequentist approach, which provides punctual estimates and confidence intervals based solely on the observed data, the Bayesian method gives a full probability distribution over the parameters. This feature will be of great advantage in our model, allowing greater adaptability. 
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{\textwidth}
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				domain=-3:6,
+				samples=100,
+				ymin=0, ymax=1,
+				xlabel={$\theta$},
+				ylabel={$P(\theta)$},
+				title={Prior Distribution},
+				axis lines=middle,
+				every axis plot/.append style={thick}
+				]
+				\addplot[blue] {exp(-0.5*((x-1)/1.2)^2)};
+			\end{axis}
+		\end{tikzpicture}
+	\end{subfigure}
+	
+	\vspace{1em} % Adds vertical spacing
+	
+	\begin{subfigure}{\textwidth}
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				domain=-3:6,
+				samples=100,
+				ymin=0, ymax=1,
+				xlabel={$\theta$},
+				ylabel={$P(D|\theta)$},
+				title={Likelihood Function},
+				axis lines=middle,
+				every axis plot/.append style={thick}
+				]
+				\addplot[green, dashed] {exp(-0.5*((x-2.5)/0.8)^2)};
+			\end{axis}
+		\end{tikzpicture}
+	\end{subfigure}
+	
+	\vspace{1em} % Adds vertical spacing
+	
+	\begin{subfigure}{\textwidth}
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				domain=-3:6,
+				samples=100,
+				ymin=0, ymax=1,
+				xlabel={$\theta$},
+				ylabel={$P(\theta|D)$},
+				title={Posterior Distribution},
+				axis lines=middle,
+				every axis plot/.append style={thick}
+				]
+				\addplot[red] {exp(-0.5*((x-2)/0.7)^2)};
+			\end{axis}
+		\end{tikzpicture}
+	\end{subfigure}
+	
+	\caption{Bayesian updating: (Top) Prior distribution, (Middle) Likelihood function, (Bottom) Posterior distribution}
+\end{figure}
+
+
+\subsection{Numerical approximations for Bayesian methods}
+
+Due to the complex nature of the likelihood function in the SEINR model, which results from integrating deterministic differential equations with stochastic observation processes, an analytical solution for the posterior distribution is not attainable. Instead, we employ numerical methods, specifically Markov Chain Monte Carlo (MCMC) techniques, to approximate the posterior.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Figures/mcmc_chain.png}  % Replace with actual figure file
+	\caption{An example of MCMC chain}
+	%\label{fig:commuting_matrix}
+\end{figure}
+The implementation proceeds as follows:
+
+\begin{enumerate}
+	\item The parameter vector is initialized with estimates derived from existing virological literature and preliminary model calibration.
+	
+	\item At each iteration of the MCMC algorithm:
+	\begin{itemize}
+		\item A candidate set of parameters is generated using a carefully chosen proposal distribution.
+		\item The candidate is then evaluated against the current parameter set by computing an acceptance probability, which depends on the ratio of their respective posterior probabilities.
+	\end{itemize}
+	
+	\item The acceptance criterion follows the Metropolis-Hastings algorithm:
+	\begin{equation}
+		\alpha = \min \left( 1, \frac{P(\theta^* | D)}{P(\theta | D)} \right),
+	\end{equation}
+	where:
+	\begin{itemize}
+		\item \( \theta^* \) is the candidate parameter set,
+		\item \( \theta \) is the current parameter set,
+		\item \( P(\theta | D) \) is the posterior probability given the observed data \( D \).
+	\end{itemize}
+	If \( \theta^* \) yields a higher posterior probability, it is accepted; otherwise, it is accepted with probability \( \alpha \). This ensures that, over many iterations, the chain of sampled parameters converges to the true posterior distribution.
+	
+	\item Once convergence is achieved, it is assessed using diagnostic measures such as the Gelman-Rubin statistic:
+	\begin{equation}
+		\hat{R} = \frac{\text{Var}^+(\theta)}{W},
+	\end{equation}
+	where \( \text{Var}^+(\theta) \) is the pooled variance estimate and \( W \) is the within-chain variance. In our case a value of \( \hat{R} \approx 1 \) indicates convergence.
+	
+	\item Finally, the resulting posterior sample is used to approximate a probability distribution function, and some of its features such as average, median value and credibility intervals. 
+	
+	\item The approximate posterior distribution is then used in our model to make the predictions we need. In the following cycle, the posterior distribution becomes the new prior, and the numerical algorithm is triggered once again. 
+\end{enumerate}
+
+While this Bayesian approach is computationally demanding (because we need to run an enormous amount of simulations in order to approximate a continuous probability distribution), its ability to explicitly account for uncertainty and dynamically update forecasts makes it a powerful tool, particularly during periods of rapid epidemiological change (as we will see, each year has different peaks and valleys in flu incidence during the winter season).
+
+\begin{figure}[h]
+	\centering
+	% First subplot: Markov Chain State Transitions
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\begin{tikzpicture}
+			% Nodes
+			\node (S1) [state] at (0,2) {$\theta_1$};
+			\node (S2) [state] at (2,3) {$\theta_2$};
+			\node (S3) [state] at (4,2) {$\theta_3$};
+			\node (S4) [state] at (3,0) {$\theta_4$};
+			\node (S5) [state] at (1,0) {$\theta_5$};
+			
+			% Arrows
+			\draw [arrow] (S1) -- (S2) node[midway, above left] {$P_{12}$};
+			\draw [arrow] (S2) -- (S3) node[midway, above] {$P_{23}$};
+			\draw [arrow] (S3) -- (S4) node[midway, right] {$P_{34}$};
+			\draw [arrow] (S4) -- (S5) node[midway, below] {$P_{45}$};
+			\draw [arrow] (S5) -- (S1) node[midway, left] {$P_{51}$};
+			\draw [arrow] (S2) -- (S4) node[midway, right] {$P_{24}$};
+			\draw [arrow] (S3) -- (S1) node[midway, above] {$P_{31}$};
+		\end{tikzpicture}
+		\caption{Markov Chain transitions between parameter states}
+	\end{subfigure}
+	\hfill
+	% Second subplot: Markov Chain Monte Carlo Sampling
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				domain=0:20,
+				samples=100,
+				xlabel={Iteration (t)},
+				ylabel={Sampled $\theta$ Value},
+				title={Markov Chain Sampling of Posterior},
+				axis lines=left,
+				ymin=0, ymax=5,
+				xtick={0,5,10,15,20},
+				ytick={1,2,3,4,5},
+				every axis plot/.append style={thick}
+				]
+				% Simulated MCMC sample path
+				\addplot[red, mark=o] coordinates {(0,1) (1,2) (2,3) (3,2) (4,4) (5,3) (6,5) (7,4) (8,3) (9,2) (10,1) (11,2) (12,3) (13,4) (14,3) (15,2) (16,3) (17,4) (18,5) (19,4) (20,3)};
+			\end{axis}
+		\end{tikzpicture}
+		\caption{MCMC sampling process for Bayesian inference}
+	\end{subfigure}
+	
+	% Third subplot: Posterior reconstruction histogram
+	\begin{subfigure}{0.9\textwidth}
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				ybar,
+				xlabel={Parameter Value $\theta$},
+				ylabel={Frequency (Posterior Samples)},
+				title={Reconstructed Posterior Distribution from MCMC Samples},
+				symbolic x coords={1,2,3,4,5},
+				xtick=data,
+				ymin=0, ymax=10,
+				nodes near coords,
+				every axis plot/.append style={thick, fill=blue!50}
+				]
+				% Simulated posterior distribution histogram
+				\addplot coordinates {(1,3) (2,5) (3,9) (4,7) (5,4)};
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Histogram showing posterior probability reconstruction}
+	\end{subfigure}
+	
+	\caption{Markov Chain in Bayesian Inference: (a) A Markov Chain transitions between different parameter states. (b) Over time, an MCMC sampler explores these states, generating samples from the posterior. (c) A histogram of these samples reconstructs the posterior probability distribution.}
+\end{figure}
+
 
 \chapter{Coding and Implementation}
-Parla delle librerie di python utilizzate, dell'approccio "discreto" usato per risolvere le eq. diff. ordinarie
+
+Next, we will describe the practical aspects of implementing our SEINR model using Python. The implementation relies on a combination of high-level libraries for numerical computations, data handling, and file management. We will also describe the strategy we employed to numerically solve a time-discrete system of ODEs. 
+
+From now on, the non-bayesian strategy of using a fixed distribution of parameters each week (without a posteriori updates) will be considered a particular case of bayesian modelling where the prior distribution is equal to the posterior: this is done to avoid confusion and for brevity's sake, since most sections of the code are similar for both strategies. 
 
 \section{Coding Bayesian Inference}
-Spiega la parte di codice relativa a Bayes
 
-\section{Uploading our results}
-Spiega finalmente come abbiamo formattato i dati per inviarli a Influcast e Respicast, metti qualche tabella
-\section{Related work}\label{sec:rel}
-Menzionare brevemente i lavori precedenti a cui ci siamo ispirati per il modello
+Our approach to Bayesian inference relies on a combination of Python libraries. \textit{NumPy} is used for computationally efficient math operations and array management. For example, \texttt{np.linspace} is used to generate uniformly spaced values for parameters like the latency rate (\(\nu\)), the transmission rate (\(\lambda\)), the infectiousness period (\(\beta\)), and the recovery rate (\(\gamma\)). This allows us to explore a broad range of parameter combinations efficiently.
+
+We rely on \textit{Pandas} for reading and manipulating CSV files containing flu incidence data. A key part of the code involves iterating through the available data files, extracting all relevant information (such as region names, year, week, and target values), and aggregating this data into structured dictionaries.
+
+For instance, one section of the code reads regional CSV files, extracts the latest available data for each region, and builds a dictionary containing weekly incidence values. This ensures that the model?s input data is always based on the most recent available records.
+
+\subsection{Solving the SEINR Model}
+
+To numerically solve the system of ODEs, we use a discrete approach, simulating the model on a day-by-day basis. Each time step corresponds to one day, and the numerical integration method used is similar to an explicit Euler integration scheme. At each step, the state variables ()Susceptible, Exposed, Infectious, Non-infectious, and Removed) are updated according to the differential equations governing the phenomenon (which are explained in detail in chapter 1). 
+
+\subsection{Bayesian Updates and Parameter Estimation}
+
+For the Bayesian updates, we integrate prior parameter distributions with simulation results. The implementation follows an iterative approach:
+
+\begin{enumerate}
+	\item A large number of simulations are run for a single week using sampled parameter sets.
+	\item The model outputs weekly incidence predictions, which are then compared to real incidence data using a Gaussian likelihood function.
+	\item The likelihood values are used to weight the parameter sets (e.g: which parameters are more likely to cause this data?).
+	\item The updated posterior is saved and used as the new prior for subsequent iterations.
+\end{enumerate}
+
+These steps are repeated each week, and each week our estimates of the parameters should become slightly more adapted to real-world data.
+
+\section{Forecast File Format for Influcast Repository}
+
+To contribute weekly influenza forecasts to the Influcast GitHub repository, our predictions must be formatted according to a predefined structure and saved as CSV files. Each file needs to follow a strict naming convention and contains specific columns to ensure compatibility with the system.
+
+\subsection{File Naming and Storage}
+
+Forecast files are stored within the repository using the following path structure:
+\begin{center}
+	\texttt{previsioni/Team\_X-Modello\_Y/2024\_05.csv}
+\end{center}
+
+where:
+\begin{itemize}
+	\item \texttt{Team\_X} represents the name of the forecasting team.
+	\item \texttt{Modello\_Y} identifies the model (MetaFlu in our case) used for the predictions.
+	\item \texttt{2024\_05.csv} refers to the year and  week of the forecast.
+\end{itemize}
+
+\subsection{CSV File Structure}
+
+Each forecast file must contain the following columns:
+
+\begin{table}[h]
+	\centering
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabular}{|c|c|l|}
+		\hline
+		\textbf{Column Name} & \textbf{Type} & \textbf{Description} \\
+		\hline
+		\texttt{anno} & Integer & Year of the forecast. \\
+		\texttt{settimana} & Integer & week of the forecast. \\
+		\texttt{luogo} & String & Location code (national or regional). \\
+		\texttt{tipo\_valore} & String & Always set to "quantile". \\
+		\texttt{id\_valore} & Float & Quantile value (from 0.01 to 0.99). \\
+		\texttt{orizzonte} & Integer & Forecast horizon (from 1 to 4). \\
+		\texttt{valore} & Float & Predicted weekly incidence per 1000 patients. \\
+		\texttt{target} & String & Prediction target (ILI in our case). \\
+		\hline
+	\end{tabular}
+	\caption{Required columns for forecast CSV files.}
+	\label{tab:forecast_format}
+\end{table}
+
+\subsection{Column Details}
+
+\begin{itemize}
+	\item \textbf{anno, settimana}: The year and epidemiological week of the forecast, stored as integers. These values must match those in the surveillance report and the filename (except for the leading zero in single-digit weeks).
+	\item \textbf{luogo}: A two-character code indicating the forecast's geographical scope:
+	\begin{itemize}
+		\item \texttt{IT}: National forecast.
+		\item \texttt{01} - \texttt{21}: Regional codes, following the official mapping:
+		\begin{itemize}
+			\item \texttt{01}: Abruzzo, \texttt{02}: Basilicata, \texttt{03}: Calabria, \dots, \texttt{21}: Veneto.
+		\end{itemize}
+	\end{itemize}
+	\item \textbf{tipo\_valore}: This field is always set to "quantile".
+	\item \textbf{id\_valore}: Represents the quantile for which the forecast is provided. Required quantiles include:
+	\begin{center}
+		0.01, 0.025, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 0.975, 0.99.
+	\end{center}
+	\item \textbf{orizzonte}: An integer indicating the forecast horizon:
+	\begin{itemize}
+		\item \texttt{-1}, \texttt{0}: the most recent and second-most recent surveillance week. Some models include these values in their output file, but they are not necessary in order to participate to the project. 
+		\item \texttt{1} - \texttt{4}: Predictions for one to four weeks ahead.
+	\end{itemize}
+	\item \textbf{valore}: A floating-point number representing the predicted weekly incidence (cases per 1000 patients), corresponding to the given week, quantile, and location.
+	\item \textbf{target}: Specifies the type of forecast. Allowed values are:
+	\begin{itemize}
+		\item \texttt{ILI}: Influenza-like illness.
+		\item \texttt{ILI+FLU-A}: Influenza-like illness, including influenza A cases.
+		\item \texttt{ILI+FLU-B}: Influenza-like illness, including influenza B cases.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Example of a Valid Forecast File}
+
+Below is an excerpt from a correctly formatted CSV output file:
+
+\begin{verbatim}
+	anno,settimana,luogo,tipo_valore,id_valore,orizzonte,valore,target
+	2023,45,IT,quantile,0.975,1,0.982,ILI
+	2023,45,IT,quantile,0.975,2,0.995,ILI
+	2023,45,IT,quantile,0.975,3,1.084,ILI
+	2023,45,IT,quantile,0.975,4,1.174,ILI
+	2023,45,IT,quantile,0.5,1,0.934,ILI+_FLU_A
+	2023,45,IT,quantile,0.5,2,0.956,ILI+_FLU_A
+\end{verbatim}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Figures/influcast_output.png}  % Replace with actual figure file
+	\caption{A graphical visualization of an output file uploaded to Influcast}
+	%\label{fig:commuting_matrix}
+\end{figure}
 
 \chapter{Experiments and Contributions}\label{sec:cont}
 Spiega che esperimenti abbiamo fatto, le stime che abbiamo fornito e a quali progetti abbiamo lavorato

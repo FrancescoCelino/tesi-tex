@@ -2,35 +2,42 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Methods}{7}{chapter.2}%
-\contentsline {section}{\numberline {2.1}The Metapopulation SEINR Framework}{9}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Activity-Driven Meta-Population Model}{9}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Disease Progression}{9}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Contagion Mechanism and Contact Probabilities}{10}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Age classes}{10}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}Commuting matrix}{11}{subsection.2.1.5}%
-\contentsline {subsection}{\numberline {2.1.6}Vaccines}{11}{subsection.2.1.6}%
-\contentsline {section}{\numberline {2.2}Other parameters}{12}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Real-world Data}{12}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Data Format}{12}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Data Manipulation}{13}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Model Calibration}{14}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}A different approach: Bayesian estimates}{15}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Theory of Bayesian Estimates}{15}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Implementation}{15}{subsection.2.4.2}%
-\contentsline {chapter}{\numberline {3}Coding and Implementation}{17}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Coding Bayesian Inference}{17}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Uploading our results}{17}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Related work}{17}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Experiments and Contributions}{19}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Collaborative Projects}{19}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Influcast}{19}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Respicast}{19}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Collaborative paper published}{19}{subsection.4.1.3}%
-\contentsline {chapter}{\numberline {5}Model Validation}{21}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Christmas Holiday issue}{21}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Methodology}{21}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Numerical results}{21}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Conclusion}{23}{chapter.6}%
-\contentsline {chapter}{Bibliography}{25}{chapter.6}%
+\contentsline {chapter}{List of Figures}{4}{section*.1}%
+\contentsline {chapter}{List of Tables}{5}{section*.2}%
+\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Methods}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}The Metapopulation SEINR Framework}{11}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Activity-Driven Meta-Population Model}{11}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Disease Progression}{12}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Contagion Mechanism and Contact Probabilities}{13}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Age classes}{14}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Commuting matrix}{14}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Vaccines}{15}{subsection.2.1.6}%
+\contentsline {section}{\numberline {2.2}Other parameters}{15}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Real-world Data}{15}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Data Format}{16}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Data Manipulation}{17}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Model Calibration}{18}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}A different approach: Bayesian estimates}{19}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Theory of Bayesian Estimates}{19}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Numerical approximations for Bayesian methods}{20}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {3}Coding and Implementation}{25}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Coding Bayesian Inference}{25}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Solving the SEINR Model}{25}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Bayesian Updates and Parameter Estimation}{26}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Forecast File Format for Influcast Repository}{26}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}File Naming and Storage}{26}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}CSV File Structure}{26}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Column Details}{27}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Example of a Valid Forecast File}{28}{subsection.3.2.4}%
+\contentsline {chapter}{\numberline {4}Experiments and Contributions}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Collaborative Projects}{29}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Influcast}{29}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Respicast}{29}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Collaborative paper published}{29}{subsection.4.1.3}%
+\contentsline {chapter}{\numberline {5}Model Validation}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Christmas Holiday issue}{31}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Methodology}{31}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Numerical results}{31}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Conclusion}{33}{chapter.6}%
+\contentsline {chapter}{Bibliography}{35}{chapter.6}%

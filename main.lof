@@ -1,0 +1,20 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Flowchart of the SIR Compartmental Model.}}{9}{figure.caption.3}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Comparison of infection dynamics based on $R_0$. Left: If $R_0 < 1$, infection decreases and dies out. Right: If $R_0 > 1$, infection spreads and leads to an epidemic.}}{11}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces A flow chart explaining how the SEINR compartmental model is organized}}{12}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Interactions between communities in the Metapopulation framework}}{13}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Representation of the commuting matrix \(W\) showing mobility patterns between different regions. Taken from \cite {par21}}}{14}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Incidence as a function of week number for various years}}{16}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Bayesian updating: (Top) Prior distribution, (Middle) Likelihood function, (Bottom) Posterior distribution}}{22}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces An example of MCMC chain}}{23}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Markov Chain in Bayesian Inference: (a) A Markov Chain transitions between different parameter states. (b) Over time, an MCMC sampler explores these states, generating samples from the posterior. (c) A histogram of these samples reconstructs the posterior probability distribution.}}{24}{figure.caption.16}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A graphical visualization of an output file uploaded to Influcast}}{28}{figure.caption.18}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
