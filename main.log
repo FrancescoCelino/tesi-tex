@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.26)  24 FEB 2025 01:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.26)  25 FEB 2025 00:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1958,38 +1958,38 @@ File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 z/libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 106.
-Package hyperref Info: Option `colorlinks' set `true' on input line 106.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 107.
+Package hyperref Info: Option `colorlinks' set `true' on input line 107.
 \c@osservazione=\count352
 \c@definition=\count353
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-2.
+3.
 
 (C:\Users\celin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Info: Redefining \it@ocap on input line 112.
-LaTeX Info: Redefining \it@ccap on input line 112.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Info: Redefining \it@ocap on input line 113.
+LaTeX Info: Redefining \it@ccap on input line 113.
 
 (C:\Users\celin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -2031,7 +2031,7 @@ e
 (C:\Users\celin\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 ))
-Package hyperref Info: Link coloring ON on input line 112.
+Package hyperref Info: Link coloring ON on input line 113.
 
 (main.out) (main.out)
 \@outlinefile=\write6
@@ -2043,58 +2043,58 @@ Package hyperref Info: Link coloring ON on input line 112.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 112.
+ on input line 113.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 <Cover/polito_new-1.jpg, id=164, 1760.5775pt x 1244.65pt>
 File: Cover/polito_new-1.jpg Graphic file (type jpg)
 <use Cover/polito_new-1.jpg>
-Package pdftex.def Info: Cover/polito_new-1.jpg  used on input line 124.
+Package pdftex.def Info: Cover/polito_new-1.jpg  used on input line 125.
 (pdftex.def)             Requested size: 98.99463pt x 70.00249pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-35.
+36.
 (C:\Users\celin\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-35.
+36.
 
 (C:\Users\celin\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-135.
+136.
 
 (C:\Users\celin\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-135.
+136.
 
 (C:\Users\celin\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 135.
+(Font)              <10.95> on input line 136.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 135.
+(Font)              <8> on input line 136.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 135.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 135
+(Font)              <6> on input line 136.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 136
 .
 
 (C:\Users\celin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 135
+LaTeX Font Info:    Trying to load font information for U+msb on input line 136
 .
 
 (C:\Users\celin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 135.
+(Font)              <12> on input line 136.
 
 
 [1{C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}
@@ -2113,7 +2113,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.150 \listoffigures
+l.151 \listoffigures
                      [1] (main.toc
 
 
@@ -2130,7 +2130,19 @@ l.36 ...ne {4.1.2}Respicast}{29}{subsection.4.1.2}
 
 
 
-[3] (main.lof)
+[3] (main.lof
+Overfull \hbox (3.92812pt too wide) in paragraph at lines 10--10
+ [][] [][][]\T1/lmr/m/n/10.95 Interactions be-tween com-mu-ni-ties in the Metap
+op-u-la-tion frame-work. Taken 
+ []
+
+
+Overfull \hbox (9.05037pt too wide) in paragraph at lines 20--20
+ [][] [][][]\T1/lmr/m/n/10.95 Forecasting Time-line: Data is up-dated ev-ery Fr
+i-day, re-cal-i-brated on Monday- 
+ []
+
+)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
@@ -2174,21 +2186,21 @@ Chapter 2.
 {C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}
 ]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-26.
+27.
  (C:\Users\celin\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Package pgfplots info on input line 262: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 263: Overriding colorspace to rgb due to xc
 olor configuration.
 
-Overfull \hbox (58.14702pt too wide) in paragraph at lines 266--267
+Overfull \hbox (58.14702pt too wide) in paragraph at lines 267--268
  [][] 
  []
 
-Package pgfplots info on input line 284: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 285: Overriding colorspace to rgb due to xc
 olor configuration.
 
-Overfull \hbox (58.14702pt too wide) in paragraph at lines 288--289
+Overfull \hbox (58.14702pt too wide) in paragraph at lines 289--290
  [][] 
  []
 
@@ -2204,22 +2216,22 @@ Underfull \vbox (badness 3417) has occurred while \output is active []
 
 
 [11]
-Overfull \hbox (22.54723pt too wide) in paragraph at lines 307--308
+Overfull \hbox (22.54723pt too wide) in paragraph at lines 308--309
 []\T1/lmr/m/n/10.95 The in-hab-i-tants of each com-mu-nity are then di-vided in
 to $\OML/lmm/m/it/10.95 P$ \T1/lmr/m/n/10.95 "ac-tiv-ity classes", $\OML/lmm/m/
 it/10.95 a[]; a[]; [] ; a[]$\T1/lmr/m/n/10.95 ,
  []
 
-<Figures/SEINR.png, id=317, 1218.05063pt x 135.50626pt>
+<Figures/SEINR.png, id=334, 1218.05063pt x 135.50626pt>
 File: Figures/SEINR.png Graphic file (type png)
 <use Figures/SEINR.png>
-Package pdftex.def Info: Figures/SEINR.png  used on input line 320.
+Package pdftex.def Info: Figures/SEINR.png  used on input line 321.
 (pdftex.def)             Requested size: 295.75032pt x 32.90053pt.
 
 
 [12{C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.e
 nc} <./Figures/SEINR.png>]
-Overfull \hbox (7.54564pt too wide) detected at line 341
+Overfull \hbox (7.54564pt too wide) detected at line 342
 \OT1/lmr/m/n/10.95 ^^E[](\OML/lmm/m/it/10.95 t\OT1/lmr/m/n/10.95 ) = \OML/lmm/m
 /it/10.95 ma[]\OT1/lmr/m/n/10.95 (1 \OMS/lmsy/m/n/10.95 ^^@ \OML/lmm/m/it/10.9
 5 ^^Lb\OT1/lmr/m/n/10.95 )\OML/lmm/m/it/10.95 ^^UP[] \OT1/lmr/m/n/10.95 + \OML/
@@ -2230,132 +2242,95 @@ P[] \OT1/lmr/m/n/10.95 + \OML/lmm/m/it/10.95 m^^La[]b [] \OT1/lmr/bx/n/10.95 W
 []\OML/lmm/m/it/10.95 ^^UQ[];
  []
 
+<Figures/communities_interaction.png, id=342, 1003.3485pt x 637.78275pt>
+File: Figures/communities_interaction.png Graphic file (type png)
+<use Figures/communities_interaction.png>
+Package pdftex.def Info: Figures/communities_interaction.png  used on input lin
+e 354.
+(pdftex.def)             Requested size: 295.75032pt x 187.98857pt.
 
-LaTeX Warning: File `Figures/communities_interactions.png' not found on input l
-ine 353.
 
-
-! Package pdftex.def Error: File `Figures/communities_interactions.png' not fou
-nd: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.353 ...th]{Figures/communities_interactions.png}
-                                                    % Replace with actual fi...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-53.
-(C:\Users\celin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-
-[13]
-<Figures/commuting_matrix.png, id=333, 483.0045pt x 410.13225pt>
+[13 <./Figures/communities_interaction.png>]
+<Figures/commuting_matrix.png, id=353, 483.0045pt x 410.13225pt>
 File: Figures/commuting_matrix.png Graphic file (type png)
 <use Figures/commuting_matrix.png>
-Package pdftex.def Info: Figures/commuting_matrix.png  used on input line 374.
+Package pdftex.def Info: Figures/commuting_matrix.png  used on input line 375.
 (pdftex.def)             Requested size: 295.75032pt x 251.12527pt.
 
 
 [14 <./Figures/commuting_matrix.png>]
-
-LaTeX Warning: File `Figures/incidence_time_series.png' not found on input line
- 416.
-
-
-! Package pdftex.def Error: File `Figures/incidence_time_series.png' not found:
- using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.416 ...width]{Figures/incidence_time_series.png}
-                                                    % Replace with actual fi...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<Figures/incidence_time_series.png, id=366, 659.46375pt x 350.5095pt>
+File: Figures/incidence_time_series.png Graphic file (type png)
+<use Figures/incidence_time_series.png>
+Package pdftex.def Info: Figures/incidence_time_series.png  used on input line 
+417.
+(pdftex.def)             Requested size: 295.75032pt x 157.19833pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
+28.
+(C:\Users\celin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 
 [15]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[16]
+[16 <./Figures/incidence_time_series.png>]
 
 [17]
 
 [18]
-
-[19]
-Package pgfplots info on input line 560: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 561: Overriding colorspace to rgb due to xc
 olor configuration.
-Package pgfplots info on input line 580: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 581: Overriding colorspace to rgb due to xc
 olor configuration.
-Package pgfplots info on input line 600: Overriding colorspace to rgb due to xc
+Package pgfplots info on input line 601: Overriding colorspace to rgb due to xc
 olor configuration.
 
 
-LaTeX Warning: Float too large for page by 54.04126pt on input line 607.
+LaTeX Warning: Float too large for page by 54.04126pt on input line 608.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<Figures/markov_chain.png, id=401, 721.2546pt x 570.933pt>
+File: Figures/markov_chain.png Graphic file (type png)
+<use Figures/markov_chain.png>
+Package pdftex.def Info: Figures/markov_chain.png  used on input line 616.
+(pdftex.def)             Requested size: 295.75032pt x 234.11017pt.
 
-LaTeX Warning: File `Figures/mcmc_chain.png' not found on input line 615.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-! Package pdftex.def Error: File `Figures/mcmc_chain.png' not found: using draf
-t setting.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.615 ...th=0.7\textwidth]{Figures/mcmc_chain.png}
-                                                    % Replace with actual fi...
+[19]
+Package pgfplots info on input line 696: Overriding colorspace to rgb due to xc
+olor configuration.
 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Overfull \hbox (57.51425pt too wide) in paragraph at lines 700--701
+ [][] 
+ []
 
+Package pgfplots info on input line 718: Overriding colorspace to rgb due to xc
+olor configuration.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
 [20]
-Package pgfplots info on input line 695: Overriding colorspace to rgb due to xc
-olor configuration.
-
-Overfull \hbox (57.51425pt too wide) in paragraph at lines 699--700
- [][] 
- []
-
-Package pgfplots info on input line 717: Overriding colorspace to rgb due to xc
-olor configuration.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 
 [21]
 
-[22]
+[22 <./Figures/markov_chain.png>]
 
 [23]
 
-[24]
+[24
+
+]
 Chapter 3.
 
 
@@ -2370,55 +2345,36 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [26]
 
 [27]
-
-LaTeX Warning: File `Figures/influcast_output.png' not found on input line 850.
-
-
-
-! Package pdftex.def Error: File `Figures/influcast_output.png' not found: usin
-g draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.850 ...\textwidth]{Figures/influcast_output.png}
-                                                    % Replace with actual fi...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<Figures/influcast_output.png, id=452, 1437.4503pt x 1086.2181pt>
+File: Figures/influcast_output.png Graphic file (type png)
+<use Figures/influcast_output.png>
+Package pdftex.def Info: Figures/influcast_output.png  used on input line 851.
+(pdftex.def)             Requested size: 295.75032pt x 223.47171pt.
 
 
-
-[28]
+[28 <./Figures/influcast_output.png>]
 Chapter 4.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 
 [29
 
 ]
 
-[30
+[30]
 
-]
-Chapter 5.
-
-
-[31
-
-]
+[31]
 
 [32
 
 ]
-Chapter 6.
+Chapter 5.
 
-Overfull \hbox (13.7018pt too wide) in paragraph at lines 890--891
-\T1/lmr/m/n/10.95 Riporta molto breve-mente che risul-tati ab-bi-amo ot-tenuto,
- ri-calca l'importanza dell'approccio
- []
-
-(main.bbl
 
 [33
 
@@ -2427,72 +2383,82 @@ Overfull \hbox (13.7018pt too wide) in paragraph at lines 890--891
 [34
 
 ]
+Chapter 6.
+
+Overfull \hbox (13.7018pt too wide) in paragraph at lines 963--964
+\T1/lmr/m/n/10.95 Riporta molto breve-mente che risul-tati ab-bi-amo ot-tenuto,
+ ri-calca l'importanza dell'approccio
+ []
+
+(main.bbl
+
+[35
+
+]
+
+[36
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 50--53
 []\T1/lmr/m/n/10.95 Predizioni-Epidemiologiche-Italia, In-flu-cast  https://git
 hub.com/Predizioni-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--57
+Underfull \hbox (badness 10000) in paragraph at lines 59--61
+[]\T1/lmr/m/n/10.95 Influcast se-rie tem-po-rale in-ci-denza per 1000 as-sis-ti
+ti
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
 []\T1/lmr/m/n/10.95 Risultati del Cen-si-mento per-ma-nente della popo-lazione
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--57
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
 \T1/lmr/m/n/10.95 https://www.istat.it/statistiche-per-temi/censimenti/popolazi
 one-e-
  []
 
 )
 
-[35
+[37
 
 ] (main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3B039680EA8554BBC258FE98CE3C626E;6544.
+(rerunfilecheck)             Checksum: 291D9209DD559ECFFF92F61B0CA53EBB;6537.
  ) 
 Here is how much of TeX's memory you used:
- 42173 strings out of 473650
- 937985 string characters out of 5717934
- 1432696 words of memory out of 5000000
- 64434 multiletter control sequences out of 15000+600000
+ 42142 strings out of 473650
+ 935249 string characters out of 5717934
+ 1436789 words of memory out of 5000000
+ 64399 multiletter control sequences out of 15000+600000
  645588 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  138i,13n,135p,971b,2708s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{table.caption.16} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{figure.caption.17} has been referenced but does not
- exist, replaced by a fixed one
-
-<C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb>
-<C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb>
-<C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb
-><C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb
-><C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb
-><C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb>
-<C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><
-C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C
-:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:
-/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/U
-sers/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/U
-sers/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro9.pfb><C:/Us
-ers/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Us
-ers/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Use
-rs/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (37 pages, 1275004 bytes).
+<C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
+b><C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
+b><C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.p
+fb><C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.p
+fb><C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.p
+fb><C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pf
+b><C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb
+><C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb>
+<C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><
+C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:
+/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:
+/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro9.pfb><C:/
+Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/
+Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/U
+sers/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on main.pdf (39 pages, 3627498 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 115 named destinations out of 1000 (max. 500000)
- 352 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 606 PDF objects out of 1000 (max. 8388607)
+ 119 named destinations out of 1000 (max. 500000)
+ 372 words of extra memory for PDF output out of 10000 (max. 10000000)
 

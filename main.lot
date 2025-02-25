@@ -5,7 +5,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2.1}{\ignorespaces Summary of additional model parameters.}}{15}{table.caption.8}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Example of CSV file structure for weekly influenza incidence data.}}{17}{table.caption.10}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Example of CSV file structure for weekly influenza incidence data.}}{16}{table.caption.10}%
 \contentsline {table}{\numberline {2.3}{\ignorespaces Estimated parameter ranges for influenza based on virological studies \cite {flu07, flu21}.}}{18}{table.caption.12}%
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Required columns for forecast CSV files.}}{27}{table.caption.17}%

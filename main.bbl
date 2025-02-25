@@ -51,6 +51,13 @@ Predizioni-Epidemiologiche-Italia, Influcast
 \newblock 
 https://github.com/Predizioni-Epidemiologiche-Italia/Influcast
 
+\bibitem{respicast}
+Respicast background
+https://respicast.ecdc.europa.eu/background/
+
+\bibitem{insight}
+Influcast serie temporale incidenza per 1000 assistiti
+https://influcast.org/page/it/insight/
 \bibitem{istat}
 Risultati del Censimento permanente della popolazione
 \newblock https://www.istat.it/statistiche-per-temi/censimenti/popolazione-e-abitazioni/risultati/
