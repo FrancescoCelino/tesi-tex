@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.26)  25 FEB 2025 00:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.26)  25 FEB 2025 23:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1967,7 +1967,11 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
 
 (C:\Users\celin\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (main.aux)
+) (main.aux
+
+LaTeX Warning: Label `fig:influcast_front_end' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
@@ -2137,14 +2141,7 @@ op-u-la-tion frame-work. Taken
  []
 
 
-Overfull \hbox (9.05037pt too wide) in paragraph at lines 20--20
- [][] [][][]\T1/lmr/m/n/10.95 Forecasting Time-line: Data is up-dated ev-ery Fr
-i-day, re-cal-i-brated on Monday- 
- []
-
-)
-\tf@lof=\write8
-\openout8 = `main.lof'.
+Underfull \vbox (badness 1092) has occurred while \output is active []
 
 
 
@@ -2153,20 +2150,19 @@ i-day, re-cal-i-brated on Monday-
 
 
 {C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}
-{C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
-(main.lot)
+{C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}])
+\tf@lof=\write8
+\openout8 = `main.lof'.
+
+
+
+[5] (main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
 
 
-[5
-
-
-]
-
 [6
-
 
 
 ]
@@ -2174,6 +2170,8 @@ Chapter 1.
 
 
 [7
+
+
 
 ]
 
@@ -2222,7 +2220,7 @@ to $\OML/lmm/m/it/10.95 P$ \T1/lmr/m/n/10.95 "ac-tiv-ity classes", $\OML/lmm/m/
 it/10.95 a[]; a[]; [] ; a[]$\T1/lmr/m/n/10.95 ,
  []
 
-<Figures/SEINR.png, id=334, 1218.05063pt x 135.50626pt>
+<Figures/SEINR.png, id=364, 1218.05063pt x 135.50626pt>
 File: Figures/SEINR.png Graphic file (type png)
 <use Figures/SEINR.png>
 Package pdftex.def Info: Figures/SEINR.png  used on input line 321.
@@ -2242,7 +2240,7 @@ P[] \OT1/lmr/m/n/10.95 + \OML/lmm/m/it/10.95 m^^La[]b [] \OT1/lmr/bx/n/10.95 W
 []\OML/lmm/m/it/10.95 ^^UQ[];
  []
 
-<Figures/communities_interaction.png, id=342, 1003.3485pt x 637.78275pt>
+<Figures/communities_interaction.png, id=372, 1003.3485pt x 637.78275pt>
 File: Figures/communities_interaction.png Graphic file (type png)
 <use Figures/communities_interaction.png>
 Package pdftex.def Info: Figures/communities_interaction.png  used on input lin
@@ -2251,7 +2249,7 @@ e 354.
 
 
 [13 <./Figures/communities_interaction.png>]
-<Figures/commuting_matrix.png, id=353, 483.0045pt x 410.13225pt>
+<Figures/commuting_matrix.png, id=383, 483.0045pt x 410.13225pt>
 File: Figures/commuting_matrix.png Graphic file (type png)
 <use Figures/commuting_matrix.png>
 Package pdftex.def Info: Figures/commuting_matrix.png  used on input line 375.
@@ -2259,7 +2257,7 @@ Package pdftex.def Info: Figures/commuting_matrix.png  used on input line 375.
 
 
 [14 <./Figures/commuting_matrix.png>]
-<Figures/incidence_time_series.png, id=366, 659.46375pt x 350.5095pt>
+<Figures/incidence_time_series.png, id=396, 659.46375pt x 350.5095pt>
 File: Figures/incidence_time_series.png Graphic file (type png)
 <use Figures/incidence_time_series.png>
 Package pdftex.def Info: Figures/incidence_time_series.png  used on input line 
@@ -2295,7 +2293,7 @@ LaTeX Warning: Float too large for page by 54.04126pt on input line 608.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figures/markov_chain.png, id=401, 721.2546pt x 570.933pt>
+<Figures/markov_chain.png, id=431, 721.2546pt x 570.933pt>
 File: Figures/markov_chain.png Graphic file (type png)
 <use Figures/markov_chain.png>
 Package pdftex.def Info: Figures/markov_chain.png  used on input line 616.
@@ -2345,7 +2343,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [26]
 
 [27]
-<Figures/influcast_output.png, id=452, 1437.4503pt x 1086.2181pt>
+<Figures/influcast_output.png, id=482, 1437.4503pt x 1086.2181pt>
 File: Figures/influcast_output.png Graphic file (type png)
 <use Figures/influcast_output.png>
 Package pdftex.def Info: Figures/influcast_output.png  used on input line 851.
@@ -2357,6 +2355,21 @@ Chapter 4.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<Figures/influcast_front_end.png, id=488, 1100.913pt x 637.78275pt>
+File: Figures/influcast_front_end.png Graphic file (type png)
+<use Figures/influcast_front_end.png>
+Package pdftex.def Info: Figures/influcast_front_end.png  used on input line 89
+4.
+(pdftex.def)             Requested size: 295.75032pt x 171.32777pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Figures/respicast_front_end.png, id=490, 1133.4345pt x 637.78275pt>
+File: Figures/respicast_front_end.png Graphic file (type png)
+<use Figures/respicast_front_end.png>
+Package pdftex.def Info: Figures/respicast_front_end.png  used on input line 90
+7.
+(pdftex.def)             Requested size: 295.75032pt x 166.41324pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2365,82 +2378,119 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [29
 
 ]
+<Figures/influcast_models_submission.jpg, id=498, 445.13203pt x 438.73647pt>
+File: Figures/influcast_models_submission.jpg Graphic file (type jpg)
+<use Figures/influcast_models_submission.jpg>
+Package pdftex.def Info: Figures/influcast_models_submission.jpg  used on input
+ line 918.
+(pdftex.def)             Requested size: 295.75032pt x 291.50168pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 
 [30]
 
-[31]
+[31 <./Figures/influcast_front_end.png> <./Figures/respicast_front_end.png>]
 
-[32
-
-]
+[32 <./Figures/influcast_models_submission.jpg>]
 Chapter 5.
+<Figures/influcast_paper_table.png, id=516, 488.42474pt x 300.52275pt>
+File: Figures/influcast_paper_table.png Graphic file (type png)
+<use Figures/influcast_paper_table.png>
+Package pdftex.def Info: Figures/influcast_paper_table.png  used on input line 
+952.
+(pdftex.def)             Requested size: 295.75032pt x 181.97502pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Figures/influcast_paper_performance_by_horizon.jpg, id=519, 442.5738pt x 339.6
+0504pt>
+File: Figures/influcast_paper_performance_by_horizon.jpg Graphic file (type jpg
+)
+<use Figures/influcast_paper_performance_by_horizon.jpg>
+Package pdftex.def Info: Figures/influcast_paper_performance_by_horizon.jpg  us
+ed on input line 959.
+(pdftex.def)             Requested size: 295.75032pt x 226.94345pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 
 [33
 
 ]
 
-[34
+[34 <./Figures/influcast_paper_table.png>]
+
+[35 <./Figures/influcast_paper_performance_by_horizon.jpg>]
+
+[36
 
 ]
 Chapter 6.
 
-Overfull \hbox (13.7018pt too wide) in paragraph at lines 963--964
+Overfull \hbox (13.7018pt too wide) in paragraph at lines 970--971
 \T1/lmr/m/n/10.95 Riporta molto breve-mente che risul-tati ab-bi-amo ot-tenuto,
  ri-calca l'importanza dell'approccio
  []
 
 (main.bbl
 
-[35
+[37
 
 ]
 
-[36
+[38
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 50--53
+Underfull \hbox (badness 10000) in paragraph at lines 54--57
 []\T1/lmr/m/n/10.95 Predizioni-Epidemiologiche-Italia, In-flu-cast  https://git
 hub.com/Predizioni-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--61
+Underfull \hbox (badness 10000) in paragraph at lines 63--65
 []\T1/lmr/m/n/10.95 Influcast se-rie tem-po-rale in-ci-denza per 1000 as-sis-ti
 ti
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
 []\T1/lmr/m/n/10.95 Risultati del Cen-si-mento per-ma-nente della popo-lazione
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
 \T1/lmr/m/n/10.95 https://www.istat.it/statistiche-per-temi/censimenti/popolazi
 one-e-
  []
 
 )
 
-[37
+[39
 
 ] (main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 291D9209DD559ECFFF92F61B0CA53EBB;6537.
  ) 
 Here is how much of TeX's memory you used:
- 42142 strings out of 473650
- 935249 string characters out of 5717934
- 1436789 words of memory out of 5000000
- 64399 multiletter control sequences out of 15000+600000
+ 42175 strings out of 473650
+ 936729 string characters out of 5717934
+ 1440030 words of memory out of 5000000
+ 64426 multiletter control sequences out of 15000+600000
  645588 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 138i,13n,135p,971b,2708s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 138i,13n,135p,1001b,2708s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
 b><C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
 b><C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.p
@@ -2456,9 +2506,9 @@ C:/Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:
 Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/
 Users/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/U
 sers/celin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (39 pages, 3627498 bytes).
+Output written on main.pdf (41 pages, 4328267 bytes).
 PDF statistics:
- 606 PDF objects out of 1000 (max. 8388607)
- 119 named destinations out of 1000 (max. 500000)
- 372 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 658 PDF objects out of 1000 (max. 8388607)
+ 125 named destinations out of 1000 (max. 500000)
+ 397 words of extra memory for PDF output out of 10000 (max. 10000000)
 
