@@ -31,6 +31,7 @@
 	state/.style={circle, minimum size=1.2cm, draw=blue, fill=blue!20, text centered},
 	arrow/.style={thick,->,>=stealth}
 }
+\pgfplotsset{compat=1.17}
 % Definition of a new language for listings
 %\lstdefinelanguage{P4}
 %{
@@ -919,21 +920,54 @@ All this work led to a collaborative paper titled \textit{?Collaborative forecas
 	\caption{ (A): Ensemble predictions for a 1-week horizon (with 50 percent and 90 percent confidence intervals) at the national and regional level in different submission rounds. (B) How many models submitted predictions for each submission round. Taken from \cite{influcast}}
 	%\label{fig:commuting_matrix}
 \end{figure}
-
+Our model was labelled as \textit{Mechanistic-1} in this article. 
 As we will see in the section regarding model validation, the ensemble consistently ranked among the best compared to individual models and a baseline forecast. Its performance worsened slightly over longer horizons, but the ensemble still outperformed the baseline across all timeframes. 
 
 
 \chapter{Model Validation}
-Confronta i risultati ottenuti con i due metodi con le varie metriche di errore (log score, weighted interval score, mean relative error, mean absolute error, coverage) spiegando pregi e difetti di ognuna
+In this chapter, a comparison of two strategies for the SEINR model's parameters update will be given: the non-Bayesian method, which, as explained, operates with fixed parameter ranges, and the Bayesian method, which utilizes data to update parameters weekly. The goal is to determine which of the methods shows better results according to certain error metrics. Specifically, the measures that will be used are: 
+\begin{itemize}
+	\item the log score 
+	\item weighted interval score 
+	\item mean relative error 
+	\item mean absolute error 
+	\item relative MAE 
+	\item the 50 percent and 90 percent coverage rates.
+\end{itemize}
+
+First of all, the log score assesses the performance of a probabilistic forecast by taking the logarithm of the probability of the event which actually happened. In other words, if a forecast is better, then its probability will be higher and thus the log score will be higher (less negative). One of the biggest advantages of the log score is its ability to properly penalize?e predictions that are overconfident about the wrong outcome. Nevertheless, it may be too sensitive of a measure, especially if the forecast is trying to predict rare events. 
+
+The Weighted interval score (WIS) is intended for measuring both the precision and the focus of a forecast through prediction intervals. This is achieved by comparing the predicted quantiles with the actual observed value. The benefit of the WIS is that it can show the overall quality of the forecast distribution, not just a single point estimate. It is very useful especially when the forecasts are expressed in terms of several quantiles. The negative side, however, is that WIS may be harder to interpret compared to direct measures like MAE, as it brings together information concerning the spread and the central tendency of the forecast.
+
+Next, we have the mean absolute error (MAE) and the mean relative error (MRE). The MAE is a simple metric that gives you the average of the differences of values of the predicted and observed ones. This allows us to understand how severe the average error is without considering whether the forecast is under or over the real value. In comparison, the MRE scales these errors by the observed values, which is very helpful, especially when we are dealing with data that have different scales. Another related metric, the relative MAE, expresses these errors as a ratio, thus, enabling the comparison of the errors across different regions or time periods. However, the drawback of these metrics is that they are based only on point estimates and thus, do not consider the uncertainty that is naturally occurring in probabilistic forecasts, like the ones we are dealing with. 
+
+Additionally, coverage percentages (50 percent and 90 percent) are used to evaluate the performance of the forecast intervals in capturing the real results. In other words, if the prediction interval is 50 percent, then about half of the observed values should approximately fall within that range. At the same time, a 90 percent interval should enclose approximately 90 percent of the observations within it. High-coverage shows that the intervals are consistent with the actual realizations, nevertheless, in the case of their being too wide, the forecast may be of lesser quality for decision-making. Low coverage, on the opposite, implies that the intervals are too narrow, hence, they do not cover up the uncertainty. 
+
+By examining the Bayesian and non-Bayesian strategies based upon these metrics, a few important findings can be made. The Bayesian method has an advantage because the estimates are the output of a recurrent learning process by utilizing the most recent data, thus allowing for improved calibration and lower errors in the long run. This technique is particularly viable in dynamic scenarios where the circumstances are changing rapidly. However, computational costs increase and the model becomes more complex.
+
+Conversely, the non-Bayesian solution is more straightforward and does not require excessive processing power. However, a larger range of fixed parameters risks providing uninformative, while mostly correct, estimates.
+
+Still, the non-Bayesian method is probably sufficient as a reference point, in order to at least get a rough estimate of the evolution of the contagion. 
+
+
+\section{Overfitting}
+An important aspect to keep in mind when trying to model real phenomena is overfitting. The Bayesian approach is in general quite flexible, adapting or refining its parameters when presented new informative data; however, this flexibility can sometimes lead to the model fitting the noise or the peculiarities of the particular data too closely. Overfitting appears when a model not only models the basic trend but also random fluctuations, and this leads to an inability to generalize to new data.
+
+To control overfitting, we suggest resetting the Bayesian optimization at the start of the flu season, which implies "forgetting" old data and starting over. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{Figures/overfitting.jpg}
+	\caption{Concept of overfitting explained. Taken from \cite{overfitting}}
+\end{figure}
 
 \section{Christmas Holiday issue}
-Parla del picco di casi a Natale e mostra che l'utilizzo di Bayes risolve parzialmente il problema, mostra che tutti i modelli di Influcast hanno fatto fatica in quel periodo
-\section{Methodology}
-Spiega come verificare quale dei due approcci (bayesiano e puramente deterministico) si comporta meglio nel periodo critico natalizio
+Explain how we was an unexpectedly high incidence during christmas seasons, and how each model performed poorly in that period. Explain how the bayesian strategy slightly solves the issue. Put a figure showing performance during christmas season of each model (both our two models and influcast models)
+
 
 \section{Numerical results}
 
-Metti tutti i grafici e tutte le tabelle per le varie regioni con le metriche dell'errore\cite{influcast}
+Insert plots and tables for each region, both from our personal figures and from the influcast paper\cite{influcast}
 %\begin{figure}[tb!]
 %\begin{center}
 %\includegraphics[width=10cm]{Figures/sino.pdf}
